@@ -39,7 +39,3 @@ See `Info.html` for full explanation of:
 
 This is an early working version (v0.7 prototype).  
 The project is under active development.
-
-## License
-
-MIT License
