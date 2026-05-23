@@ -25,7 +25,7 @@ Instead of solving equations in isolation, Exocalc builds a propagation system:
 
 ## Live Demo
 
-(Will be available via GitHub Pages)
+https://artriant.github.io/exocalc/
 
 ## Info / Documentation
 
