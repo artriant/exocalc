@@ -286,6 +286,21 @@ h1 {
     box-sizing: border-box;
 }
 
+.info-link {
+    display: inline-block;
+    margin: 10px auto 20px;
+    padding: 6px 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.info-link:hover {
+    background: #0056b3;
+}
+
 @media (max-width: 768px) {
     .variable-row {
         flex-direction: column;
