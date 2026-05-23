@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Calculator - Conventional Values</title>
+    <style>
+        body { font-family: verdana, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+        h1, h2, h3, h4 { color: #333; }
+        h1 { text-align: center; margin-bottom: 40px; }
+        .tip { color: green; font-weight: bold; }
+        ul { list-style-type: none; padding-left: 0; }
+        ul li { margin-bottom: 8px; }
+        p { background-color: #f0f0f0; padding: 10px; border-radius: 5px; } /* Added background color for paragraphs */
+    </style>
+</head>
+<body>
+
+<h1>Behind Exocalc</h1>
+
+<div>Exocalc is an itterative solver that imitates a student attempting to 'plug values in a pool of equations', hoping to generate results, and.. to find even more in next itterations. With suficient number of (prime or derived) equations (and their reversed versions) Exocalc can solve all possible combinations of inputs in a bidirectional fashion.<div>
+<hr>
+<h2>Instructions (How to use the calculator)</h2>
+
+    <ol>
+	    <li>Provide the <strong>minimum number of inputs</strong>. Think like a professor which is ready to provide (given) values for an Exam. You DONT want to provide values that can be calculated. </li>
+        <li><span style="color:crimson; font-weight:700; background-color:pink; border-color:dark-pink; border-radius:3px; padding:4px; margin-right:2px;">⚠️Avoid conflicting values</span>. Adding conflicting values in the input can result to conflicting results. For example you dont want to say radius is 2 but diameter is 5... To avoid that try to use inputs that come from the SAME source OR if thats imposible avoid conflicting inputs (Add example).</li>
+	    <li><strong>Pay attention to Units</strong>. You can always change them from the dropdown next to the input. Use the quick unit swap butons, to quickly swap to Earth Jupiter, SI and Kilo SI units</li>
+	    <li>Use the '<strong>comparisson mode</strong>' whenever you want to convert a result in a different unit. -->Synergizes with quick unit swap buttons as well. Careful: When you change units with comparisson mode ON the input STAYS in the original Unit</li>
+		<li>Press <strong>Enter ↵</strong> for recalculation. When a recalculation is forcefully triggered the units that are active in the dropdowns at the point are fully respected.</li>
+		<li>Open the console to see the logging, it will basically tell you in which order the problem was solved!</li>
+		<li>We use <strong>SI Units</strong> in the background for all calculations! In the console you can see the full SI value (without any rounding). Its highly recommended to read the bellow Analysis to understand better the calculator.</li>
+		<li><strong>Exocalc empowers exploration :</strong> You might not be an expert in astrophysics, but you can open websites that host planetary measurements, like NASAs Exoplanet Catalog, Wikis and others, your can plug values and find even more!</li>
+	</ol>
+
+<h2>The Power of Conventional Values</h2>
+<p>To ensure our calculated values and units are consistent with astronomical science, we use <strong>conventional values</strong>. Using a fixed, agreed-upon set of units and constants—even if they're not the "most accurate measurement"—keeps all calculations, papers, and research on the same page. So when we are using convensional value we are not being 'imprecice' but standards-compliant. Organizations like the <strong>International Astronomical Union (IAU)</strong> define these values so that the entire scientific community can be in sync. This saves from a constant cycle of updates and alot of wasted energy as accuracy improoves.</p>
+
+<hr>
+
+<h2>Conventional Values Used in Exocalc</h2>
+<p>For those who want to dive deeper:</p>
+
+<h3>Gravitational Constant (G)</h3>
+<p>The gravitational constant is a fundamental quantity that determines the strength of gravity. While its value is still being refined, for high-precision calculations, it is often more accurate to use the <strong>gravitational parameter (GM)</strong>—the product of G and a body's mass (M)—because this product can be measured with much higher precision from a satellite's orbit.</p>
+<ul>
+    <li>G = 6.67430 &times; 10⁻¹¹ m³ kg⁻¹ s⁻²</li>
+</ul>
+
+<hr>
+
+<h3>Radius</h3>
+<p>These are the IAU's fixed, nominal radii used to standardize units like "Earth radii" for exoplanet discovery.</p>
+<ul>
+    <li><strong>Earth's Radius (R<sub>&#x2295;</sub>)</strong>: The <strong>IAU nominal equatorial radius</strong> of 6,378.1366 km.</li>
+    <li><strong>Jupiter's Radius (R<sub>J</sub>)</strong>: The <strong>IAU nominal equatorial radius</strong> of 71,492 km.</li>
+</ul>
+
+<hr>
+
+<h3>Circumference</h3>
+<p>The bellow units are fictitious,  included  for comparison purposes / are derived from  conventional radiuses above (via C=2πR). We use units deriving from conventional values, for internal consistency.</p>
+<ul>
+    <li><strong>Earth's Circumference (C<sub>&#x2295;</sub>)</strong>: 40,075.014 km.</li>
+    <li><strong>Jupiter's Circumference (C<sub>J</sub>)</strong>: 449,197.484 km.</li>
+</ul>
+<p><strong><span style="color:green; font-weight:bold;">TIP</span></strong>: You can always switch to SI to compare the result. In the logs you will find accurate results in SI without any rounding.</p>
+<hr>
+
+<h3>Mass</h3>
+<p>We use the <strong>standard gravitational parameter (GM)</strong>, which can be measured with extreme precision from a satellite's orbit.</p>
+<ul>
+    <li><strong>Earth's Mass (M<sub>E</sub>)</strong>: Derived from a GM<sub>E</sub> of 3.986004418 &times; 10<sup>14</sup> m&sup3; s⁻².</li>
+    <li><strong>Jupiter's Mass (M<sub>J</sub>)</strong>: Derived from a GM<sub>J</sub> of 1.26686534 &times; 10<sup>17</sup> m&sup3; s⁻².</li>
+</ul>
+
+<hr>
+
+<h3>Volume &amp; Area</h3>
+<p>Derived from the conventional (IAU) radii.<br><br><span style="color:crimson; font-weight:700; background-color:pink; border-color:dark-pink; border-radius:3px; padding:4px; margin-right:2px;">⚠️Attention:</span> Conventional values (like the official IAU nominal Earth constant bellow) DO involve rounding. And that rounding <strong>will</strong> be respected as part of the convension. So we wont be adding more units.</p>
+<ul>
+    <li><strong>Earth's Volume (V<sub>&#x2295;</sub>)</strong>: A standard value of 1.08321 &times; 10<sup>21</sup> m&sup3;.</li>
+    <li><strong>Jupiter's Volume (V<sub>J</sub>)</strong>: A standard value of 1.43128 &times; 10<sup>24</sup> m&sup3;.</li>
+</ul>
+
+<hr>
+
+<h3>Mean Density</h3>
+<p>These are derived from the conventional mass and volume values.</p>
+<ul>
+    <li><strong>Earth's Mean Density (&rho;<sub>&#x2295;</sub>)</strong>: 5,514 kg/m&sup3;.</li>
+    <li><strong>Jupiter's Mean Density (&rho;<sub>J</sub>)</strong>: 1,326 kg/m&sup3;.</li>
+</ul>
+
+<hr>
+
+<h3>Acceleration (Gravity)</h3>
+<p>These values represent the standard gravitational forces for each planet.</p>
+<ul>
+    <li><strong>Earth's Standard Gravity (g<sub>&#x2295;</sub>)</strong>: A defined standard of 9.80665 m/s&sup2;.</li>
+    <li><strong>Jupiter's Mean Gravity (g<sub>J</sub>)</strong>: A widely accepted mean value of 24.79 m/s&sup2;.</li>
+</ul>
+
+<hr>
+
+<h3>Escape Velocity</h3>
+<p>These values are standard, conventional figures for the minimum speed needed to escape each planet's gravitational pull.</p>
+<ul>
+    <li><strong>Earth's Escape Velocity (V<sub>&#x2295;esc</sub>)</strong>: 11,186 m/s.</li>
+    <li><strong>Jupiter's Escape Velocity (V<sub>Jesc</sub>)</strong>: 59,500 m/s.</li>
+</ul>
+
+<hr>
+
+<h2>Common Oddities Explained</h2>
+<p><strong>The use of conventional values ensures consistency with astronomy, but may result to oddities.</strong></p>
+<p>Using conventional values means our units are consistent with those used in scientific papers. For example, if a paper states an exoplanet is 5.4 Earth radii (R<sub>&#x2295;</sub>), our calculator will convert that to the same measurement in meters that a professional astronomer would use.</p>
+<p>Oddities can arise when applying these units to the same planets that defined them. A common point of confusion is using <strong>1 R<sub>&#x2295;</sub></strong> to describe Earth's mean radius. This is incorrect. <strong>1 R<sub>&#x2295;</sub></strong> is the IAU's nominal <strong>equatorial</strong> radius (~6,378 km), which is about ~7 km more than Earth's mean radius (~6,371 km).</p>
+<p><strong><span style="color:green; font-weight:bold;">TIP</span></strong>: To accurately define Earth's shape as an oblate spheroid, use both the equatorial (6378.137 km) and polar (6356.752 km) conventional measurements. The calculator will then correctly compute a mean radius of approximately 6,371 Kilometers and 87cm or so.. which is basicaly the non rounded version of the popular textbook value.</p>
+<p>But even with this level of precision in your geometry, the mean surface gravity will slightly exceed 1 g<sub>&#x2295;</sub>. This can be highly confusing, as many sources state Earth's surface gravity is exactly 1 g.</p>
+<p>Here's the explanation <span style="color:crimson; font-weight:700; background-color:pink; border-color:dark-pink; border-radius:3px; padding:4px; margin-right:2px;">⚠️Warning Technical wall of text incoming:</span>:<br><br> <strong>1 g<sub>&#x2295;</sub></strong> is a conventionally defined constant (exactly 9.80665 m/s²). It represents the average gravity that we feel at 45° latitude and accounts for the effects of Earth's spin and its non-spherical shape. Our mean radius calculation, however, does not include these factors, leading to a slightly higher theoretical value. (Actually  the 1g is not a 'calculated value', but an agreed upon value)</p>
+<p>On top of that the 'inverse square law' that we use so far for gravity is NOT the most precise method (Yes you heard me right) as it hypothesizes that all mass is uniform or consetrated in one point. Spherical harmonics on the other side take in account: Oblatness, lattitude, height, and most importantly the mass distribution. Applying this advanced method for an angle of 45° on Earth at 50m height, yields ~1g. Spherical harmonics equations, are unique for each planet.</p>
+
+<p>Ultimately, the conventional values are not here to demosntrate the most accurate measurements, also some of them may be conflicting, 1ER does not yield 1EV. But thats nothing compared to the benefits. A world without conventional values will end up like the Babels Tower. Imagine having to change lets say all references in all books because a unit became more accurate lol</p>
+
+<h2>Notes</h2>
+
+<p>In this calculator, the <strong>Mean Radius (R_mean)</strong> is specifically defined as the <strong>Volumetric Mean Radius</strong>. When a planet is defined by this single value, it represents a "perfectly spherical equivalent"—a sphere that contains the exact same volume as a planet more accurately described as an oblate spheroid. This model relates the two shapes by assuming constant volume based on an idealized <strong>Maclaurin Spheroid</strong>.</p>
+
+<p>You will notice that when you adjust the oblateness (flattening) of a planet in this calculator, the <strong>volume remains constant</strong> by design. This reflects the physical reality that while flattening redistributes mass and tends to <strong>increase the surface area</strong>, the total amount of space the planet occupies (its volume) is preserved for the purpose of our mean radius calculation.</p>
+<hr>
+<p style="text-align:right;">Author Aris T.</p>
+
+</body>
+</html>

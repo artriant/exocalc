@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content">
+    <div class="container">
+        <h1>Exoplanet Properties Calculator</h1>
+
+        <div id="calculatorForm" class="calculator-form">
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <input type="checkbox" id="logSkipsCheckbox">
+                <label for="logSkipsCheckbox">Log Skipped Calculations to Console</label>
+            </div>
+            <div class="control-group">
+                <label for="maxIterationsInput">Maximum Iterations:</label>
+                <input type="number" id="maxIterationsInput" value="10" min="1">
+            </div>
+            <div class="control-group unit-buttons-group">
+                <button type="button" id="earthUnitsBtn" class="unit-switch-btn" title="Switch all outputs to Earth units">
+                    <span class="earth-symbol-btn">⊕</span>
+                </button>
+                <button type="button" id="jupiterUnitsBtn" class="unit-switch-btn" title="Switch all outputs to Jupiter units">
+                    <span class="jupiter-symbol-btn">J</span>
+                </button>
+                <button type="button" id="siUnitsBtn" class="unit-switch-btn" title="Switch all outputs to SI units">
+                    <span class="si-symbol-btn">SI</span>
+                </button>
+                <button type="button" id="bigSiUnitsBtn" class="unit-switch-btn" title="Switch all outputs to Big SI units">
+                    <span class="big-si-symbol-btn">KSI</span>
+                </button>
+                <input type="checkbox" id="enableDerivedEquationsCheckbox" checked>
+                <label for="enableDerivedEquationsCheckbox">Enable Derived Equations</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" id="compareModeCheckbox">
+                <label for="compareModeCheckbox">Compare Mode</label>
+                <input type="checkbox" id="autoRecalcModeCheckbox">
+                <label for="autoRecalcModeCheckbox">Auto Recalc Mode</label>
+            </div>
+            <button id="calculateButton">Calculate</button>
+        </div>
+    </div>
+  </div>
+  <div class="legend-container">
+        <h3>Legend</h3>
+        <ul class="legend-list">
+            <li class="legend-item legend-variables">
+                <span class="legend-item-part"><span class="legend-symbol">R:</span> Radius</span>
+				<span class="legend-item-part"><span class="legend-symbol">C:</span> Circumference</span>
+                <span class="legend-item-part"><span class="legend-symbol">ρ:</span> Density</span>
+                <span class="legend-item-part"><span class="legend-symbol">V:</span> Volume</span>
+				<span class="legend-item-part"><span class="legend-symbol">M:</span> Mass</span>
+                <span class="legend-item-part"><span class="legend-symbol">SG:</span> Surface Gravity</span>
+                <span class="legend-item-part"><span class="legend-symbol">A:</span> Area</span>
+				<span class="legend-item-part"><span class="legend-symbol">esc:</span> Escape (eg Velocity)</span>
+				<span class="legend-item-part"><span class="legend-symbol">eq:</span> Equatorial</span>
+				<span class="legend-item-part"><span class="legend-symbol">p:</span> Polar</span>
+				<span class="legend-item-part"><span class="legend-symbol">T:</span> Rotational Period</span>
+				<span class="legend-item-part"><span class="legend-symbol">SR:</span> sidereal</span>
+				<span class="legend-item-part"><span class="legend-symbol">ω:</span> Rotational Rate</span>
+				<span class="legend-item-part"><span class="legend-symbol">𝑣rot:</span> Rotational Linear Velocity</span>
+				<span class="legend-item-part"><span class="legend-symbol">Ac:</span> Centrifugal Accel.</span>
+				<span class="legend-item-part"><span class="legend-symbol">eff.:</span> Effective </span>
+
+            </li>
+            <hr>
+            <li class="legend-item">
+                <span class="legend-symbol">⊕</span> represents Earth equivalent units, e.g., R⊕ for Earth Radii.
+            </li>
+            <li class="legend-item">
+                <span class="legend-symbol">J</span> represents Jupiter equivalent units, e.g., RJ for Jupiter Radii.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Removed type="module" as script.js is no longer a module -->
+    <script src="script.js"></script>
+</body>
+</html>
