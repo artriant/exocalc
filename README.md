@@ -1,29 +1,27 @@
 # Exocalc 🪐
 
-Exocalc is an iterative solver engine (currently demostrated on exoplanets with prime focus on their physical characteristics).
-Although it can be currenlty used for other celestial bodies like planets, moons, dwarf planets Etc.
+**Exocalc** is a demo for a deterministic iterative solver, focusing on the physical characteristics of exoplanets (though it can be used for other celestial bodies too). 
+What you get looks like a typical web calculator, but you quickly notice it has multiple inputs and solves problems bidirectionaly, whereas most calculators solve equations in only one direction.
 
-It simulates a step-by-step reasoning process where known physical values are repeatedly fed through a 'pool' of equations. Each iteration may produce new values, which are then reused in further iterations until no new information can be extracted.
+## Core Idea of the Solver
 
-## Core Idea
+Instead of relying on a fixed calculation order, the solver propagates the known values(aka inputs) through a shared "pool of equations." Newly derived values are reused in the next iteration until no further information can be extracted.
 
-Instead of solving equations in isolation (or in a fixed order), Exocalc builds a propagation system that deterministically solves through iterative inference:
-
-- You provide a small set of known values (for example mass & radius)
-- The system applies physics equations in both forward and reverse forms
-- New values are derived iteratively
-- The process repeats until convergence
+- You provide a small set of known values (for example, mass and radius).
+- The system applies physics equations in both forward and reverse forms.
+- New values are derived iteratively.
+- The process repeats until convergence.
 
 ## Features
 
 - Iterative equation-solving engine
-- Bidirectional equation support (forward & inverse forms)
-- Internal SI unit system (We solve everything in SI in the background))
-- Support for astronomical reference bodies (Earth, Jupiter, etc.)
-- Step-by-step console logging of solving process
+- Bidirectional equation support (forward and inverse forms)
+- Internal SI unit system (everything is solved in SI in the background)
+- Support for reference units (such as Earth and Jupiter units)
+- Step-by-step console logging of the solving process
 - Conflict-aware input validation
 - Quality-of-life tools:
-  - Instant unit conversion in the output when the comparison mode is ON
+  - Instant unit conversion in the output when comparison mode is ON
   - Quick unit swap buttons
   - Enter-to-recalculate
   - Auto-recalculation mode
@@ -34,13 +32,11 @@ https://artriant.github.io/exocalc/
 
 ## Info / Documentation
 
-See [`Info.html`](https://artriant.github.io/exocalc/Info.html) for more details on:
+See <a href="https://artriant.github.io/exocalc/Info.html" target="_blank"><code>Info.html</code></a> for more details on:
 
-- The general logic
-- Scientific conventions used
-- Unit system
-- Physical constants
-- Background theory and usage guidelines
+- The general logic and idea of the solver
+- Unit system constant and coventional values
+- Background, theory and usage guidelines
 
 ## Status
 
