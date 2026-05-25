@@ -1,11 +1,11 @@
 # Exocalc 🪐
 
-**Exocalc** is a demo for a deterministic iterative solver, focusing on the physical characteristics of exoplanets (though it can be used for other celestial bodies too). 
-What you get looks like a typical web calculator, but you quickly notice it has multiple inputs and solves problems bidirectionaly, whereas most calculators solve equations in only one direction.
+**Exocalc** is a demo case for a deterministic iterative solver, focusing on the physical characteristics of exoplanets (though it can be used for other celestial bodies too). 
+What you get looks like a typical web calculator, but you quickly notice it has multiple inputs and solves problems bidirectionaly, whereas most calculators solve equations in only one direction and require specific isolated inputs.
 
 ## Core Idea of the Solver
 
-Instead of relying on a fixed calculation order, the solver propagates the known values(aka inputs) through a shared "pool of equations." Newly derived values are reused in the next iteration until no further information can be extracted.
+Instead of relying on a fixed calculation order, the solver propagates the known values through a shared "pool of equations." Newly derived values are reused in the next iteration until no further information can be extracted.
 
 - You provide a small set of known values (for example, mass and radius).
 - The system applies physics equations in both forward and reverse forms.
@@ -34,8 +34,7 @@ https://artriant.github.io/exocalc/
 
 See <a href="https://artriant.github.io/exocalc/Info.html" target="_blank"><code>Info.html</code></a> for more details on:
 
-- The general logic and idea of the solver
-- Unit system constant and coventional values
+- Coventional values and units
 - Background, theory and usage guidelines
 
 ## Status
